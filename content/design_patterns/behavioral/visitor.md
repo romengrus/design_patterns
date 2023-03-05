@@ -8,36 +8,6 @@ draft: true
 
 Основная цель Visitor - абстрагировать функциональность, которая может быть применена к иерархии объектов. Этот подход способствует разработке облегченных классов Element, поскольку функциональность обработки исключена из списка их обязанностей. Новая функциональность может быть легко добавлена к исходной иерархии наследования путем создания нового подкласса Visitor.
 
-## UML
-
-```plantuml
-@startuml
-package "Visitor" #dddddd {
-    interface Visitor {
-        + visit(Element1 el1)
-        + visit(Element2 el2)
-    }
-
-    class ConcreteVisitor implements Visitor {
-        + visit(Element1 el1)
-        + visit(Element2 el2)
-    }
-
-    interface Element {
-        + accept(Visitor v)
-    }
-
-    class Element1 implements Element {
-        + accept(Visitor v)
-    }
-
-    class Element2 implements Element {
-        + accept(Visitor v)
-    }
-}
-@enduml
-```
-
 ## Принцип работы
 
 -   Убедиться, что текущая иерархия элементов будет достаточно стабильной и что публичный интерфейс этих классов открыт для доступа, который потребуется классам Visitor. Если эти условия не выполняются, то шаблон Visitor не подходит.

@@ -14,32 +14,6 @@ draft: true
 
 Мы можем решить проблемы с большим количеством параметров, предоставив конструктор с обязательными параметрами, а затем различные методы setter для установки необязательных параметров. Проблема такого подхода заключается в том, что состояние объекта будет несогласованным, пока все атрибуты не будут установлены явно. Шаблон Builder решает проблему с большим количеством необязательных параметров и несогласованным состоянием, предоставляя способ создания объекта шаг за шагом и предоставляя метод, который фактически возвращает конечный объект.
 
-## UML
-
-```plantuml
-@startuml
-package "Builder" #dddddd {
-	class ComplexObject {
-		+ builder1(): ConcreteBuilder1
-		+ builder2(): ConcreteBuilder2
-	}
-
-	class ConcreteBuilder1 {
-		// same props as in ComplexObject
-		+ build(): ComplexObject
-	}
-
-	class ConcreteBuilder2 {
-		// same props as in ComplexObject
-		+ build(): ComplexObject
-	}
-
-	ComplexObject *-- ConcreteBuilder1
-	ComplexObject *-- ConcreteBuilder2
-}
-@enduml
-```
-
 ## Принцип работы
 
 1. Создать статический вложенный класс Builder, а затем скопировать все аргументы из внешнего класса в класс Builder. Мы должны следовать соглашению об именовании, и если имя класса - Computer, то класс Builder должен быть назван ComputerBuilder.

@@ -8,33 +8,6 @@ draft: true
 
 Предназначен для сохранения и последующего восстановления состояния объекта.
 
-## UML
-
-```plantuml
-@startuml
-package "Memento" #dddddd {
-    class Editor {
-        private EditorState state;
-        public EditorState save();
-        public void restore(EditorState state);
-    }
-
-    class EditorState {
-        // some Editor fields ...
-    }
-
-    class History {
-        private Stack states;
-        public void save(Memento state);
-        public void revert(Editor editor);
-    }
-
-    Editor ..> EditorState
-    History --o EditorState
-}
-@enduml
-```
-
 ## Принцип работы
 
 В паттерне Memento 3 участника:

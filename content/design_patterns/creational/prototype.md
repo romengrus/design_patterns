@@ -8,26 +8,6 @@ draft: true
 
 Шаблон Prototype используется, когда создание объекта требует много времени и ресурсов, а аналогичный объект уже существует. Модель прототипа предоставляет механизм для копирования исходного объекта в новый объект и последующей его модификации в соответствии с нашими потребностями. Шаблон проектирования Prototype использует клонирование java для копирования объекта.
 
-## UML
-
-```plantuml
-@startuml
-package "Prototype" #dddddd {
-    interface Prototype {
-        + clone()
-    }
-
-    class ConcretePrototype1 implements Prototype {
-        + clone()
-    }
-
-    class ConcretePrototype2 implements Prototype {
-        + clone()
-    }
-}
-@enduml
-```
-
 ## Принцип работы
 
 1. Добавить метод clone() к существующей иерархии классов

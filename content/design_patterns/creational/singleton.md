@@ -8,19 +8,6 @@ draft: true
 
 Kласс имеет только один экземпляр, и доступ к нему обеспечен через единую глобальную точку входа.
 
-## UML
-
-```plantuml
-@startuml
-package "Singleton" #dddddd {
-    class Singleton {
-        - instance Singleton
-        + static getInstance(): Singleton
-    }
-}
-@enduml
-```
-
 ## Принцип работы
 
 1. Определить приватный статический атрибут в классе Singleton.

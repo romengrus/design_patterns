@@ -8,27 +8,6 @@ draft: true
 
 Определить скелет алгоритма в операции, отложив некоторые шаги для клиентских подклассов. Template Method позволяет подклассам переопределять определенные шаги алгоритма без изменения структуры алгоритма.
 
-## UML
-
-```plantuml
-@startuml
-package "Template Method" #dddddd {
-    abstract class FrameworkClass {
-        + templateMethod()
-        + stepOne()
-        + stepTwo()
-        + stepThree()
-    }
-    class ApplicationClass1 extends FrameworkClass {
-        + stepTwo()
-    }
-    class ApplicationClass2 extends FrameworkClass {
-        + stepTwo()
-    }
-}
-@enduml
-```
-
 ## Принцип работы
 
 -   Определить какие шаги в алгоритме являются стандартными, а какие - характерными для каждого из существующих классов.

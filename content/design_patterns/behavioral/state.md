@@ -8,31 +8,6 @@ draft: true
 
 Если нам нужно изменить поведение объекта в зависимости от его состояния, мы можем иметь переменную состояния в объекте. Затем использовать блок условий if-else для выполнения различных действий в зависимости от состояния. Паттерн проектирования State используется для обеспечения систематического способа достижения этой цели. Контекст паттерна State - это класс, который имеет ссылку на одну из конкретных реализаций State. Контекст передает запрос объекту State для обработки.
 
-## UML
-
-```plantuml
-@startuml
-package "State" #dddddd {
-    class Client {}
-    interface State {
-        + doAction()
-    }
-    class Context {
-        - State state
-        + getState(): State
-        + setState(State state)
-        + doAction()
-    }
-    class ConcreteState1 implements State {}
-    class ConcreteState2 implements State {}
-    class ConcreteState3 implements State {}
-
-    Client --> Context
-    Context --> State
-}
-@enduml
-```
-
 ## Принцип работы
 
 Паттерн State - это решение проблемы, как сделать так, чтобы поведение зависело от состояния.

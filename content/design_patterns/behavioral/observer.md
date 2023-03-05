@@ -8,39 +8,6 @@ draft: true
 
 Согласно определению GoF, паттерн **Observer** определяет зависимость "один-ко-многим" между объектами таким образом, что когда один объект изменяет состояние, все его зависимые объекты уведомляются и обновляются автоматически. Его также называют паттерном **Publish-Subscribe**.
 
-## UML
-
-```plantuml
-@startuml
-package "Observer" #dddddd {
-    interface Subject {
-        + attach(o: Observer)
-        + detach(o: Observer)
-        + notify()
-    }
-
-    interface Observer {
-        + update()
-    }
-
-    class ConcreteSubject {
-        - State state
-        + getState(): State
-        + setState(State state)
-    }
-
-    class ConcreteObserver {
-        - ObserverState state
-        + update(State state)
-    }
-
-    ConcreteObserver --> Observer
-    ConcreteSubject --> Subject
-    ConcreteSubject --o ConcreteObserver
-}
-@enduml
-```
-
 ## Принцип работы
 
 В паттерне Observer существует множество наблюдателей (объектов-подписчиков), которые наблюдают за определенным субъектом (объектом-издателем). Наблюдатели регистрируют себя на объекте, чтобы получить уведомление, когда в этом объекте происходят изменения.

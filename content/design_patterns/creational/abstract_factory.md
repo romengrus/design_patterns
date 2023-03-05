@@ -10,35 +10,6 @@ draft: true
 В отличии от шаблона Factory, где в методе создания объектов происходит ветвление в зависимости от входных параметров, в паттерне Abstract Factory мы избавляемся от блока if-else и имеем класс фабрики для каждого подкласса.
 Короче говоря, абстрактная фабрика предоставляет интерфейс для создания различных конкретных фабрик. Каждая такая фабрика работает с семейством или группой объектов и, следовательно, абстрактная фабрика предоставляет возможность работать с несколькими такими фабриками. Поэтому мы также можем назвать ее фабрикой фабрик.
 
-## UML
-
-```plantuml
-@startuml
-package "Abstract Factory" #dddddd {
-    interface Car {
-        + color()
-        + numberOfDoors()
-        + fuelType()
-    }
-
-    class ModernCar implements Car {}
-    class ClassicCar implements Car {}
-
-    interface AbstractFactory {
-        + createCar(): Car
-    }
-
-    class ModernCarFactory implements AbstractFactory {
-        + createCar(): ModernCar
-    }
-
-    class ClassicCarFactory implements AbstractFactory {
-        + createCar(): ClassicCar
-    }
-}
-@enduml
-```
-
 ## Принцип работы
 
 Cоздать интерфейс AbstractFactory, который можно использовать как общую структуру для определения конкретной фабрики. Эти конкретные фабрики теперь могут быть использованы для создания объектов соответствующего семейства.

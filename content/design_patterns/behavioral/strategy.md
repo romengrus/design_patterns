@@ -8,29 +8,6 @@ draft: true
 
 Паттерн Strategy используется, когда у нас есть несколько алгоритмов для конкретной задачи, и клиент решает, какая реализация будет использоваться во время выполнения.
 
-## UML
-
-```plantuml
-@startuml
-package "Strategy" #dddddd {
-    class Client {}
-    class Context {}
-    interface Strategy {
-        + algorithm()
-    }
-    class ConcreateStrategy1 implements Strategy {
-        + algorithm()
-    }
-    class ConcreateStrategy2 implements Strategy {
-        + algorithm()
-    }
-
-    Client --> Context
-    Context --> Strategy
-}
-@enduml
-```
-
 ## Принцип работы
 
 -   Определить алгоритм (т.е. поведение), к которому клиент предпочел бы получить доступ.

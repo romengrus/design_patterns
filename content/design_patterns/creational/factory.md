@@ -8,34 +8,6 @@ draft: true
 
 Шаблон Factory используется, когда у нас есть суперкласс с несколькими подклассами, и на основе входных данных нам нужно вернуть один из подклассов. Этот паттерн переносит ответственность за инстанцирование класса с клиентской программы на класс-фабрику.
 
-## UML
-
-```plantuml
-@startuml
-package "Factory" #dddddd {
-    interface Shape {
-        + draw()
-    }
-
-    class Rectangle implements Shape {
-        + draw()
-    }
-
-    class Square implements Shape {
-        + draw()
-    }
-
-    class Circle implements Shape {
-        + draw()
-    }
-
-    class ShapeFactory {
-        + createShape(): Shape
-    }
-}
-@enduml
-```
-
 ## Принцип работы
 
 1. Определить какие аргументы метода фабрики необходимы и достаточны для определения правильного производного класса для инстанцирования?

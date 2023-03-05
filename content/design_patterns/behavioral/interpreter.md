@@ -10,24 +10,6 @@ draft: true
 
 Целью использования паттерна интерпретатора является обработка вводимых пользователем выражений и построение абстрактного синтаксического дерева (AST). Это AST является экземпляром шаблона [Composite]({{< relref "/structural/composite" >}} "Composite"). Затем понадобится синтаксический анализатор для разбора AST и создания выходных данных.
 
-## UML
-
-```plantuml
-@startuml
-package "Interpreter" #dddddd {
-    class Client {}
-    class Context {}
-    abstract class Expression {}
-    class TerminalExpression extends Expression {}
-    class NonTerminalExpression extends Expression {}
-
-    Client --> Context
-    Client --> Expression
-    NonTerminalExpression --o Expression
-}
-@enduml
-```
-
 ## Принцип работы
 
 Для интерпретации выражения создаются терминальные и не терминальные классы, которые описывают структуру выражения в виде абстрактного синтаксического дерева. После того как выражение из простого языка переведено в AST - его можно вычислять.
