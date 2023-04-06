@@ -1,7 +1,7 @@
 ---
 title: "Abstract_factory"
 date: 2023-03-05T20:53:45+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

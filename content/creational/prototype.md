@@ -1,7 +1,7 @@
 ---
 title: "Prototype"
 date: 2023-03-05T18:55:44+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

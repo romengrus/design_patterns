@@ -1,7 +1,7 @@
 ---
 title: "Adapter"
 date: 2023-03-05T22:22:37+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

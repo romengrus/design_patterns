@@ -1,7 +1,7 @@
 ---
 title: "Bridge"
 date: 2023-03-05T22:47:41+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

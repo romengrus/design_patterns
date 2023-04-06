@@ -1,7 +1,7 @@
 ---
 title: "Factory"
 date: 2023-03-05T19:55:35+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

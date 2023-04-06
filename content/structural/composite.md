@@ -1,7 +1,7 @@
 ---
 title: "Composite"
 date: 2023-01-29T19:32:27+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

@@ -1,7 +1,7 @@
 ---
 title: "Facade"
 date: 2023-03-06T01:14:22+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

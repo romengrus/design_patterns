@@ -1,7 +1,7 @@
 ---
 title: "Singleton"
 date: 2023-03-05T17:58:37+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

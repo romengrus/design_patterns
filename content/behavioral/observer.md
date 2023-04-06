@@ -1,7 +1,7 @@
 ---
 title: "Observer"
 date: 2023-02-12T17:42:31+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение

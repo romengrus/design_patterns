@@ -1,7 +1,7 @@
 ---
 title: "Proxy"
 date: 2023-03-06T01:36:14+02:00
-draft: true
+draft: false
 ---
 
 ## Назначение
