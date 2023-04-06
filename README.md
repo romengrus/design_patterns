@@ -2,6 +2,8 @@
 
 This repository contains a collection of examples and explanations for some of the most commonly used design patterns in Java. The examples are implemented using Java code and are organized into different directories based on their respective design pattern category.
 
+You can view the generated website at [rombyator.github.io/design_patterns](https://rombyator.github.io/design_patterns/)
+
 ## Design Pattern Categories
 
 The following design pattern categories are covered in this repository:
